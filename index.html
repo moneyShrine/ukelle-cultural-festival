@@ -25,6 +25,11 @@
 	<!-- Compressed Scripts -->
 	<script src="js/slides.min.js?41331" type="text/javascript"></script>
   <script src="js/general.js" type="text/javascript"></script>
+  <script src="js/ukelle-clans-data-FULL.js"></script>
+  <script src="js/render-ukelle-clans.js"></script>
+  
+              <script src="js/ukelle-villages.js"></script>
+
 
 	<!-- Custom Scripts -->
 	<!-- <script src="js/custom.js" type="text/javascript"></script> -->
@@ -67,6 +72,20 @@
     }
     #top-menu{
       background-color: rgb(17, 17, 17);
+    }
+    .transition-height {
+      transition: max-height 0.5s ease;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: scale(1);
     }
 			
   </style>
@@ -245,7 +264,7 @@
       <div class="wrap">
         <div class="fix-10-12">
           <div class="embedVideo popupContent">
-            <iframe src="https://www.youtube.com/embed/g8yBqxTiHSs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/9nstEc0d5rM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -262,7 +281,7 @@
       
         <div class="fix-12-12">          
               <div class="fix-7-12 left toRight">
-                  <h1 class="ae-1">Welcome Message</h1>
+                  <h1 class="ae-1">Hello and Welcome</h1>
                   <div id="welcome-msg" class="fix-7-12 left toRight">
                      <div class="scrolling-text">
                         <p class="ae-2 text-justify">
@@ -291,7 +310,7 @@
       </div>
     </div>
   </div>
-  <div class="background" style="background-image:url(assets/img/background/img-15.jpg)"></div>
+  <div class="background" style="background-image:url(assets/img/background/img-15.png)"></div>
 </section>
 
 <!-- Slide 3 (#14) -->
@@ -368,7 +387,7 @@
               <div class="videoThumbnail shadow rounded popupTrigger margin-bottom-3 ae-7" data-popup-id="89-3">
                 <img src="assets/img/masquerade.jpg" class="wide" alt="Video Thumbnail"/>
               </div>
-              <img src="assets/img/ukelle1.jpeg" data-action="zoom" class="shadow rounded ae-8" alt="Image"/>
+              <img src="assets/img/ukelle1.jpg" data-action="zoom" class="shadow rounded ae-8" alt="Image"/>
             </li>
           </ul>
         </div>
@@ -387,7 +406,12 @@
       <div class="wrap">
         <div class="fix-10-12">
           <div class="embedVideo popupContent">
-            <iframe src="https://www.youtube.com/embed/g8yBqxTiHSs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe 
+              src="https://www.youtube.com/embed/ULOgn6Kq138?autoplay=1&mute=1" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -397,15 +421,29 @@
 
 
 
-<!-- Slide 5 (#85) 
+<!-- Slide 5 (#85) -->
 <section class="slide fade-6 kenBurns">
   <div class="content">
     <div class="container">
       <div class="wrap">
       
-        <div class="fix-7-12">
-          <h1 class="ae-1">Pricing</h1>
+        <div class="">
+          <h1 class="ae-1">Ukelle Clans & Villages</h1>
+          <div class="bg-gradient-to-br from-gray-100 to-gray-200 text-gray-800 font-sans">
+              <div id="ukelle-section"></div>
+
+              <div id="ukelle-villages-section"></div>
+              <script>
+                renderUkelleVillages("ukelle-villages-section");
+              </script>
+
+
+
+
+          </div>
+           <!--
           <ul class="grid grid-85 equal margin-top-5 ae-2 fromCenter" data-equal-collapse-width="767">
+           
             <li class="col-6-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
               <div class="pad" style="background: #F5FBFE">
                 <h3>Moon</h3>
@@ -443,6 +481,8 @@
               </div>
             </li>
           </ul>
+          
+          -->
         </div> 
         
       </div>
@@ -450,7 +490,7 @@
   </div>
   <div class="background" style="background-image:url(assets/img/background/img-85.jpg)"></div>
 </section>
--->
+
 <!-- Slide 6 (#95) -->
 <section class="slide fade-6 kenBurns">
   <div class="content">
@@ -469,42 +509,40 @@
         </div>
       </section>
       
-      <section style="display: flex; align-items: center; justify-content: center; text-align: center;">
-        <div id="contact-details" style="margin: 2px; width: 40%; background-color: aliceblue; color: #000; border-radius: 50px;">
+      <section style="display: flex; align-items: center; justify-content: center; text-align: center; margin-bottom: 15px;">
+        <div id="contact-details" style="margin: 2px; width: 80%; background-color: aliceblue; color: #000; border-radius: 50px;">
           <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
               <div class="d-flex flex-column justify-content-between h-100">
-  <!-- Address -->
-  <div class="bg-light d-flex w-100 p-4 mb-4 align-items-center" style="margin-top: 30px; margin-bottom: 30px !important;">
-    <!-- TITLE + DETAILS INLINE -->
-    <div class="ms-4 d-flex flex-column">
-      <div class="d-flex align-items-center mb-1">
-        <p class="mb-0 me-2 fw-bold" style="margin-bottom: 0 !important;"><i class="fa fa-map-marker-alt text-primary fs-4"></i> Address:</p>
-        <h3 class="mb-0 fs-6">Ukelle Nation, Yala LGA, Cross River State</h3>
-      </div>
-    </div>
-  </div>
-  <!-- Phone -->
-  <div class="bg-light d-flex w-100 p-4 mb-4 align-items-center" style="margin-bottom: 30px !important;">
-    <div class="ms-4 d-flex flex-column">
-      <div class="d-flex align-items-center mb-1">
-        <p class="mb-0 fw-bold" style="margin-bottom: 0 !important;"><i class="fa fa-phone-alt text-primary fs-4"></i> Call Us Now:</p>
-        <h3 class="mb-0 fs-6">+234 901 234 5678</h3>
-      </div>
-    </div>
-  </div>
+                <!-- Address -->
+                <div class="bg-light d-flex w-100 p-4 mb-4 align-items-center" style="margin-top: 30px; margin-bottom: 30px !important;">
+                  <!-- TITLE + DETAILS INLINE -->
+                  <div class="ms-4 d-flex flex-column">
+                    <div class="d-flex align-items-center mb-1">
+                      <p class="mb-0 me-2 fw-bold" style="margin-bottom: 0 !important;"><i class="fa fa-map-marker-alt text-primary fs-4"></i> Address:</p>
+                      <h3 class="mb-0 fs-6">Ukelle Nation, Yala LGA, Cross River State</h3>
+                    </div>
+                  </div>
+                </div>
+                <!-- Phone -->
+                <div class="bg-light d-flex w-100 p-4 mb-4 align-items-center" style="margin-bottom: 30px !important;">
+                  <div class="ms-4 d-flex flex-column">
+                    <div class="d-flex align-items-center mb-1">
+                      <p class="mb-0 fw-bold" style="margin-bottom: 0 !important;"><i class="fa fa-phone-alt text-primary fs-4"></i> Call Us Now:</p>
+                      <h3 class="mb-0 fs-6">+234 901 234 5678</h3>
+                    </div>
+                  </div>
+                </div>
 
-  <!-- Email -->
-  <div class="bg-light d-flex w-100 p-4 align-items-center"style="margin-bottom: 30px !important;">
-    <div class="ms-4 d-flex flex-column">
-      <div class="d-flex align-items-center mb-1">
-        <p class="mb-0 fw-bold" style="margin-bottom: 0 !important;"><i class="fa fa-envelope-open text-primary fs-4"></i> Mail Us:</p>
-        <h3 class="mb-0 fs-6">info@ukelleculturalfestival.com</h3>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+                <!-- Email -->
+                <div class="bg-light d-flex w-100 p-4 align-items-center"style="margin-bottom: 30px !important;">
+                  <div class="ms-4 d-flex flex-column">
+                    <div class="d-flex align-items-center mb-1">
+                      <p class="mb-0 fw-bold" style="margin-bottom: 0 !important;"><i class="fa fa-envelope-open text-primary fs-4"></i> Mail Us:</p>
+                      <h3 class="mb-0 fs-6">info@ukelleculturalfestival.com</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
         <!--
@@ -539,6 +577,10 @@
 
 <!-- Loading Progress Bar -->
 <div class="progress-bar blue"></div>
+
+
+
+
 		
 </body>
 </html>
