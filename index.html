@@ -13,6 +13,7 @@
 
 	<!-- Compressed Styles -->
 	<link href="css/slides.min.css?41331" rel="stylesheet" type="text/css">
+	<link href="css/general.css" rel="stylesheet" type="text/css">
 
 	<!-- Custom Styles -->
 	<!-- <link href="css/custom.css" rel="stylesheet" type="text/css"> -->
@@ -28,7 +29,8 @@
   <script src="js/ukelle-clans-data-FULL.js"></script>
   <script src="js/render-ukelle-clans.js"></script>
   
-              <script src="js/ukelle-villages.js"></script>
+  <script src="js/ukelle-villages.js"></script>
+
 
 
 	<!-- Custom Scripts -->
@@ -56,10 +58,37 @@
     }
 
     .scrolling-text {
+      padding-right: 10px;
       display: inline-block;
       animation: scroll-up 100s linear infinite; /* 'forwards' to stop at end */
       animation-play-state: running;
+      max-height: 300px;
+      overflow-y: auto;
+      scroll-behavior: smooth;
     }
+    .scrolling-text::-webkit-scrollbar {
+      width: 6px; /* Slimmer width */
+    }
+
+    .scrolling-text::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1); /* Soft dark track */
+      border-radius: 4px;
+    }
+
+    .scrolling-text::-webkit-scrollbar-thumb {
+      background-color: rgba(50, 50, 50, 0.7); /* Dark thumb */
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.1); /* Light border for contrast */
+    }
+
+    .scrolling-text::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(80, 80, 80, 0.8); /* Slightly lighter on hover */
+    }
+    .scrolling-text {
+      scrollbar-width: thin; /* or auto */
+      scrollbar-color: rgba(50, 50, 50, 0.7) rgba(0, 0, 0, 0.1); /* thumb and track */
+    }
+
 
     /* Pause animation on hover */
     #welcome-msg:hover .scrolling-text {
@@ -253,7 +282,7 @@
       </div>
     </div>
   </div>
-  <div class="background" style="background-image:url(assets/img/background/img-09.jpg)"></div>
+  <div class="background" style="background-image:url(assets/img/background/img-09.png)"></div>
 </section>
 
 <!-- Popup Video -->
@@ -264,7 +293,7 @@
       <div class="wrap">
         <div class="fix-10-12">
           <div class="embedVideo popupContent">
-            <iframe src="https://www.youtube.com/embed/9nstEc0d5rM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/r7BZnIpf9qo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -300,7 +329,7 @@
                         </p>
                      </div>
                     
-                  </div>     
+                  </div>
                 
                 <!--<a class="button blue gradient crop ae-3">Get Started</a>  -->  
               </div>
